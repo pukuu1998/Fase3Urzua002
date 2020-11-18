@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es-la">
+<head>
+  
+  {% block title %}<title>Cine El Pepe</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<header>
+  <h1  ><img src="{% static 'img/logoo.png' %}" style="width: 70px;" > Cine El Pepe <img src="{% static 'img/logoo.png' %}" style="width: 70px;" ></h1>
+  <br>
+  <div class="divtop">  
+  <nav class="navBar navbar-expand-lg navbar-light bg-light">
+        <button id="uwu" 
+            class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+     <div class="barratop">
+        <div class="collapse navbar-collapse justify-content-between alingn-items-center w-100" style="background-image: url('img/intento1.jpg');">
+
+            <ul class="navbar-nav mx-auto nav-tabs text-lg-center text-left" style="background-image: url('img/intento1.jpg');">
+                <li class="nav-link" ><a href="{% url 'index' %}" style="color: black;">Inicio </a></li>
+                <li class="nav-link" ><a href="{% url 'cartelera' %}" style="color: black;">Cartelera </a></li>
+                <li class="nav-link"><a href="sobre_nosotros.html" style="color: black;">Sobre Nosotros</a></li>
+                <li class="nav-link"><a href="contacto.html"  style="color: black;">Contacto</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="{% url 'index' %}">Sobre Nosotros</a></li>
+      </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+    <div class="prueba3">
+      <footer id="footer">
+          <div id="inner">
+              <div class="col7">
+                  <div class="minititulo">
+                      Contacto
+                      <div class="espacio" style="height:30px"></div>
+                  </div>
+                  <div class="miniparrafo">
+                      <img src="{% static 'img/house.png' %}" style="width: 20px;" > Casa Central Cine Plaza Oeste, Cerrillos, Santiago
+                  </div>
+                  <div class="miniparrafo">
+                      <div class="espacio" style="height:10px"></div>
+                      <img src="{% static 'img/phone-call.png' %}" style="width: 20px;" > 600 600 2600
+                  </div>
+                  <div class="miniparrafo">
+                      <div class="espacio" style="height:10px"></div>
+                      <img src="{% static 'img/envelope.png' %}" style="width: 20px;" > Contacto@CineElPepe.cl
+                  </div>
+                  <div class="miniparrafo">
+                      <div class="espacio" style="height:10px"></div>
+                      <img src="{% static 'img/link.png' %}" style="width: 20px;" > www.CineElPepe.cl
+                  </div>
+              
+              </div>
+              <div class="col8">
+                  <div class="minititulo">
+                      Cines
+                      <div class="espacio" style="height:30px"></div>
+                  </div>
+                  <div class="miniparrafo">
+                      Cine Mall Plaza Oeste
+                  </div>
+                  <div class="miniparrafo">
+                     Cine Alto Las Condes 
+                  </div>
+                  <div class="miniparrafo">
+                      Cine San Bernardo 
+                  </div>
+                  <div class="miniparrafo">
+                      Cine Vivo Viña del Mar
+                  </div>
+                  <div class="miniparrafo">
+                      Cine Concepcion
+                  </div>
+                  <div class="miniparrafo">
+                     Cine Maipu
+                  </div>
+                  <div class="miniparrafo">
+                      Cine San Miguel
+                  </div>
+              </div>
+              <div class="col9">
+                  <div class="minititulo">
+                      Redes Sociales
+                      <div class="espacio" style="height:30px"></div>
+                      <div class="miniparrafo">
+                        <a href="https://www.instagram.com/cinemarkchile/?hl=es-la" class="miniparrafo" >Instagram: CineElPepe</a>
+                      </div>
+                      <div class="miniparrafo">
+                        <a href="https://www.facebook.com/CinemarkChile/" class="miniparrafo" >Facebook: CineElPepe</a>
+                      </div>
+                      <div class="miniparrafo">
+                        <a href="https://www.youtube.com/user/CinemarkChile" class="miniparrafo" >Youtube: CineElPepe</a>
+                      </div>
+                      <div class="miniparrafo">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="miniparrafo" >TikTok: CineElPepe</a>
+                      </div>
+                      <div class="miniparrafo">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="miniparrafo" >OnlyFans: CineElPepe</a>
+                      </div>
+                      <div class="espacio" style="height:30px"></div>
+                  <div class="espacio" style="height:30px"></div>
+              </div>
+          </div>
+      </footer> 
+  </div>
+
+  </div>
+</body>
+</html>

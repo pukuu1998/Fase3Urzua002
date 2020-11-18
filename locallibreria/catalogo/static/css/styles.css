@@ -1,0 +1,252 @@
+.sidebar-nav{
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+h2{
+
+   text-align: center;
+   color: white;
+}
+ h1{
+text-align: center; 
+color: white;   
+ } 
+
+ h3{
+
+    color: white;
+    text-align: left;
+ }
+
+
+
+ footer{
+    margin-top:20px;
+    clear: both;
+}
+footer article{
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background: url(../img/Fondo1.jpg) no-repeat fixed;
+    padding:10px;
+}
+
+.parrafo{
+    color: rgb(44, 44, 44);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.subtitulo{
+    color: silver;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.col1{
+    width: 50%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 60px;
+    padding-left: 60px;
+}
+.col2{
+    width: 40%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 110px;
+    padding-left: 10px;
+}
+.col3{
+    width: 40%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+.col4{
+    width: 20%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 5px;
+    padding-left: 10px;
+}
+.col5{
+    width: 20%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+.col6{
+    width: 20%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+.espacio {
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+
+.test1{
+    position: relative;
+    max-width: 1020px;
+    width: 88%;
+    margin: 0 auto;
+}
+.test2{
+    position: relative;
+    max-width: 1020px;
+    width: 88%;
+    margin: 0 auto;
+}
+.test3{
+    position: relative;
+    max-width: 1170px;
+    width: 80%;
+    margin: 100;
+}
+
+
+.font1{
+    font-size: 20px;
+}
+
+.card-text
+{
+    color: white;
+}
+
+
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #121618;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: gray;
+    background: url(../img/Fondo1.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.prueba1{
+    position: relative;
+    max-width: 1020px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.prueba2{
+    width: 20%;
+    float:left;
+    padding-right: 30px;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+.carrusel{
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.card-text {
+    color: white;
+}
+
+.header-inner-top {
+    height: 38px;
+}
+
+#footer {
+    color: #888888;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+    font-size: 12px;
+    background-color: rgb(34, 34, 34);
+    border-bottom: 5px solid rgb(0, 160, 5);
+}
+
+.inner {
+    position: relative;
+    max-width: 1020px;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.prueba3{
+    position: relative;
+    max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.col7{
+    width: 35%;
+    float:left;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+.col8{
+    width: 30%;
+    float:left;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+.col9{
+    width: 20%;
+    float:left;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+.minititulo{
+    color: rgb(218, 218, 218);
+    font-size: 20px;
+}
+
+.miniparrafo{
+    color: rgb(116, 116, 116);
+    font-size: 12px;
+}
+
+.barratop{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    background: url(../img/intento1.jpg) no-repeat fixed;
+
+}
+.divtop{
+    position: relative;
+    max-width: 400px;
+    width: 20%;
+    margin: 0 auto;
+}
+
+
+
+.categorias{
+    width: 90;
+    float:left;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.noticias{
+    width: 90;
+    float:left;
+    margin-left: 0px;
+    padding-left: 0px;
+}
