@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% block content%}
+<div class="row">
+  
+    <div class="col-md-4">
+        <h3 class="descripcion text-secondary">Nombre pelicula</h3>
+        <br>
+        <p class="texto">{{movie.title}}</p>
+          
+      <br>
+      <h3 class="descripcion text-secondary">Descripción</h3>
+      <br>
+      <p class="texto">{{movie.sinopsis}}</p>
+        <br>
+      <h3 class="descripcion text-secondary">Género</h3>
+      <br>
+
+      {% if movie.genre %}
+        <p class="texto">{{movie.genre.name}} </p>
+
+      {% else %}
+        <p class="texto">No hay géneros asociados a esta pelicula</p>
+
+      {% endif %}
+      
+      <h3 class="descripcion text-secondary">Director</h3>
+      <br>
+      <p class="texto">{{movie.director}}</p>
+        <br>
+
+    </div>
+{%endblock%}
