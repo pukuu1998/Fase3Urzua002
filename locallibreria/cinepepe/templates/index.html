@@ -23,8 +23,6 @@
 
     <main>
       <div class=carrusel>
-        
-        <!--------------Carrusel----------------------------->
         <br>
         <br>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -59,12 +57,10 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-          <!--------------Carrusel----------------------------->
         </div>
     </div>
 
     
-          <!--------------------el pepe----------------------->
           <div class="espacio" style="height:105px"></div>
           <div class="test2">
           <article class="col">
@@ -82,7 +78,7 @@
                 <div class="categorias" style="background: black">
                   <img class="card-img-top" src="{% static 'img/descuentopeli.jpg' %}"  height="300" width="100" aling ="center">            
                   <div class="card-body" >
-                    <a href="https://www.cinemark.cl/cine" class="btn btn-primary" >Ver Cartelera</a>
+                    <a href="{% url 'movies' %}" class="btn btn-primary" >Ver Cartelera</a>
                   </div>  
                        
         </div>

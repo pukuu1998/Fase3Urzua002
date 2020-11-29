@@ -30,8 +30,18 @@
             <ul class="navbar-nav mx-auto nav-tabs text-lg-center text-left" style="background-image: url('img/intento1.jpg');">
                 <li class="nav-link" ><a href="{% url 'index' %}" style="color: black;">Inicio </a></li>
                 <li class="nav-link" ><a href="{% url 'movies' %}" style="color: black;">Cartelera </a></li>
-                <li class="nav-link"><a href="sobre_nosotros.html" style="color: black;">Sobre Nosotros</a></li>
-                <li class="nav-link"><a href="contacto.html"  style="color: black;">Contacto</a></li>
+                <li class="nav-link" ><a href="{% url 'view_directors' %}" style="color: black;">Directores</a></li>
+                <li class="nav-link" ><a href="{% url 'view_genres' %}" style="color: black;">Generos</a></li>
+                {% if request.user.is_authenticated %}
+                      <li class="nav-link"><a href="#"  style="color: black;">{{ request.user.username }}</a></li>
+                    {% if request.user.is_staff %}
+                      <li class="nav-link"><a href="{% url 'crear_pelicula' %}"  style="color: black;">Agregar Pelicula</a></li>
+
+                    {% endif %}
+                <li class="nav-link"><a href="{% url 'logout' %}" style="color: black;">Cerrar Sesión</a></li>
+                {% else %}
+                <li class="nav-link"><a href="{% url 'login' %}"  style="color: black;">Iniciar Sesion</a></li>
+                {% endif %}
             </ul>
         </div>
       </div>
@@ -45,14 +55,6 @@
   <div class="container-fluid">
 
     <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Inicio</a></li>
-          <li><a href="{% url 'index' %}">Sobre Nosotros</a></li>
-      </ul>
-     {% endblock %}
-      </div>
       <div class="col-sm-10 ">
       {% block content %}{% endblock %}
       </div>

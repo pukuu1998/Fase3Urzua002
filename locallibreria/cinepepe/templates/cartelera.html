@@ -22,41 +22,27 @@
     
 
     <main>
-    <!--------------------el pepe----------------------->
+        {% for pelicula in peliculas %}
           <div class="espacio" style="height:105px"></div>
           <div class="test2">
-          <article class="col">
-            <div class="row">       
-              <div class="col-md">        
-                  <div class="categorias" style="background: black">
-                    <img class="card-img-top" src="/static/img/cabritas.jpg"  height="300" width="100" aling ="center">            
-                    <div class="card-body" >
-                      <a href="https://www.cinemark.cl/confiteria" class="btn btn-primary" >Confiteria</a>
-                    </div>
-                            
-          </div>
-          <div class="row">       
-            <div class="col-md">        
-                <div class="categorias" style="background: black">
-                  <img class="card-img-top" src="/static/img/descuentopeli.jpg"  height="300" width="100" aling ="center">            
-                  <div class="card-body" >
-                    <a href="https://www.cinemark.cl/cine" class="btn btn-primary" >Ver Cartelera</a>
-                  </div>  
-                       
-        </div>
-        <div class="row">       
-          <div class="col-md">        
-              <div class="categorias" style="background: black">
-                <img class="card-img-top" src="/static/img/entradagratis.jpg"  height="300" width="100" aling ="center">            
-                <div class="card-body" >
-                  <a href="https://www.cinemark.cl/promociones" class="btn btn-primary" >Solicitar</a>
+            <article class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="{{ pelicula.imagen }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ pelicula.director.get_fullname }}</h5>
+                  <p class="card-text text-dark">{{ pelicula.sinopsis }}</p>
+                  <a href="/movie/{{ pelicula.uuid }}" class="btn btn-primary">{{ pelicula.title }}</a>
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_staff %}
+                        <a href="/movie/edit/{{ pelicula.uuid }}" class="btn btn-success">Editar</a>
+                        <a href="/movie/delete/{{ pelicula.uuid }}" class="btn btn-danger">Eliminar</a>
+                    {% endif %}
+                  {% endif %}
                 </div>
-              </div>          
-            </div>
-          </div>
+              </div>
         </article>
-            </div>
-
+      </div>
+        {% endfor %}
     </main>
           <div class="espacio" style="height:100px"></div>
    

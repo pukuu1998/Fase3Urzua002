@@ -6,27 +6,25 @@
     <div class="col-md-4">
         <h3 class="descripcion text-secondary">Nombre pelicula</h3>
         <br>
-        <p class="texto">{{movie.title}}</p>
+        <p class="texto">{{ pelicula.title }}</p>
           
       <br>
       <h3 class="descripcion text-secondary">Descripción</h3>
       <br>
-      <p class="texto">{{movie.sinopsis}}</p>
+      <p class="texto">{{ pelicula.sinopsis }}}</p>
         <br>
-      <h3 class="descripcion text-secondary">Género</h3>
+      <h3 class="descripcion text-secondary">Géneros</h3>
       <br>
-
-      {% if movie.genre %}
-        <p class="texto">{{movie.genre.name}} </p>
-
+      {% if pelicula.get_num_generos > 0 %}
+      {% for g in pelicula.generos.all %}
+        <p class="texto">{{ g.name }} </p>
+      {% endfor %}
       {% else %}
         <p class="texto">No hay géneros asociados a esta pelicula</p>
-
       {% endif %}
-      
       <h3 class="descripcion text-secondary">Director</h3>
       <br>
-      <p class="texto">{{movie.director}}</p>
+      <p class="texto">{{pelicula.director}}</p>
         <br>
 
     </div>

@@ -222,17 +222,17 @@ body {
 
 .barratop{
     position: relative;
-    max-width: 900px;
+    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     background: url(../img/intento1.jpg) no-repeat fixed;
 
 }
 .divtop{
     position: relative;
-    max-width: 400px;
+    max-width: 500px;
     width: 20%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 
