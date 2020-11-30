@@ -41,6 +41,7 @@ class Director(models.Model):
 	def get_short_uuid(self):
 		codigo =str(self.uuid) 
 		return codigo[:len(codigo)//3]
+		
 	def __str__(self):
 		"""String for representing the Model object."""
 		return f'{self.last_name}, {self.first_name}'
