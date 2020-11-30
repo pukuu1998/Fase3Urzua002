@@ -86,10 +86,14 @@ def login_form(request):
 
 
 def logout_view(request):
-    if request.user.is_authenticated:
-        logout(request)
-    return redirect('/')
-
+    try:
+        if request.user.is_authenticated:
+            logout(request)
+        else:
+            return redirect('/')
+        return redirect('/')
+    except:
+        return('/')
 def eliminar_pelicula(request,uuid):
     if request.user.is_authenticated and request.user.is_staff:
         pelicula = Pelicula.objects.get(uuid = uuid)
